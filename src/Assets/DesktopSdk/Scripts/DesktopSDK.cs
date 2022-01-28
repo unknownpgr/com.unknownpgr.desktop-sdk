@@ -27,14 +27,20 @@ public class DesktopSDK : MonoBehaviour
     DontDestroyOnLoad(this.gameObject);
   }
 
-  public void Initialize()
+  public void ShowMessage(string message)
   {
-    if (isInitialized) return;
+    if (!isInitialized) return;
 
     GameObject messageObject = Instantiate(MessagePrefab, MainCanvas.transform);
     MessageManager messageManager = messageObject.GetComponent<MessageManager>();
-    messageManager.SetText("SDK is initialized.");
+    messageManager.SetText(message);
+  }
 
+  public void Initialize()
+  {
+    if (isInitialized) return;
     isInitialized = true;
+
+    ShowMessage("SDK is initialized.");
   }
 }
