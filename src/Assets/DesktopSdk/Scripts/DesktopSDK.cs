@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class DesktopSDK : MonoBehaviour
 {
@@ -40,7 +41,24 @@ public class DesktopSDK : MonoBehaviour
   {
     if (isInitialized) return;
     isInitialized = true;
+    ShowMessage("SDK is initialized. It will get some information from server in few seconds.");
+    StartCoroutine(ServerCall());
+  }
 
-    ShowMessage("SDK is initialized.");
+  IEnumerator ServerCall()
+  {
+    yield return new WaitForSeconds(3);
+
+    UnityWebRequest request = UnityWebRequest.Get("https://checkip.amazonaws.com");
+    yield return request.SendWebRequest();
+
+    if (request.result != UnityWebRequest.Result.Success)
+    {
+      ShowMessage("Error occurred while connecting to server.");
+      yield break;
+    }
+
+    string data = request.downloadHandler.text;
+    ShowMessage("Your IP is " + data);
   }
 }

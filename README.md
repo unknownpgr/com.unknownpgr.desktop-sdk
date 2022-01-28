@@ -5,7 +5,7 @@ This project implements an Unity SDK that implements following requirements.
 - [x] The host application should be able to initiate the SDK
 - [x] If initiated, the SDK will display simple message on screen
 - [x] Upon triggered by the application, the SDK will show simple UI
-- [ ] (Plus) SDK is initialized and communicated with server via HTTPS protocol
+- [x] (Plus) SDK is initialized and communicated with server via HTTPS protocol
 
 ## Considerations
 
