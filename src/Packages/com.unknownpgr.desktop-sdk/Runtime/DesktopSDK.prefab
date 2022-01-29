@@ -43,4 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9a2d0ae9e074c8f8ddbc0c406a3c48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MainCanvas: {fileID: 5303069969393682242, guid: 8f1f351de38f646c089f9c5eb4ccd66e, type: 3}
   MessagePrefab: {fileID: 7460584920261826971, guid: 760241899ccf44a33ab446fd6e836a5e, type: 3}

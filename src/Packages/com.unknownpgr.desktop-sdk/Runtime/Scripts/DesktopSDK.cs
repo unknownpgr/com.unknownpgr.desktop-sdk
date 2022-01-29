@@ -12,7 +12,7 @@ public class DesktopSDK : MonoBehaviour
     get { return instance; }
   }
 
-  public Canvas MainCanvas;
+  public GameObject MainCanvas;
   public GameObject MessagePrefab;
 
   private bool isInitialized = false;
@@ -41,6 +41,11 @@ public class DesktopSDK : MonoBehaviour
   {
     if (isInitialized) return;
     isInitialized = true;
+    if (MainCanvas.gameObject.scene.name == null)
+    {
+      // MainCanvas is a prefab. Instantiation required.
+      MainCanvas = Instantiate(MainCanvas);
+    }
     ShowMessage("SDK is initialized. It will get some information from server in few seconds.");
     StartCoroutine(ServerCall());
   }
