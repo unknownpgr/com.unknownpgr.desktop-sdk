@@ -1,0 +1,17 @@
+{
+  "name": "com.unknownpgr.desktop-sdk",
+  "version": "1.1.1",
+  "displayName": "Simple Desktop SDK",
+  "description": "Simple sdk for unity desktop application",
+  "unity": "2020.3",
+  "unityRelease": "26f1",
+  "keywords": [
+    "SDK",
+    "Desktop"
+  ],
+  "author": {
+    "name": "Unknownpgr",
+    "email": "unknownpgr@gmail.com",
+    "url": "https://unknownpgr.com"
+  }
+}
