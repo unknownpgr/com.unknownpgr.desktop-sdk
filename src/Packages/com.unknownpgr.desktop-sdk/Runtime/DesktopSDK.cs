@@ -50,7 +50,7 @@ public class DesktopSDK : MonoBehaviour
     StartCoroutine(ServerCall());
   }
 
-  IEnumerator ServerCall()
+  private IEnumerator ServerCall()
   {
     yield return new WaitForSeconds(3);
 
