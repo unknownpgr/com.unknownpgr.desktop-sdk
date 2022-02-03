@@ -14,6 +14,7 @@ public class DesktopSDK : MonoBehaviour
 
   public GameObject MainCanvas;
   public GameObject MessagePrefab;
+  public GameObject PromptPrefab;
 
   private bool isInitialized = false;
 
@@ -35,6 +36,16 @@ public class DesktopSDK : MonoBehaviour
     GameObject messageObject = Instantiate(MessagePrefab, MainCanvas.transform);
     MessageManager messageManager = messageObject.GetComponent<MessageManager>();
     messageManager.SetText(message);
+  }
+
+  public void ShowPrompt(string promptMessage, PromptManager.OnAcceptHandler acceptHandler)
+  {
+    if (!isInitialized) return;
+
+    GameObject promptObject = Instantiate(PromptPrefab, MainCanvas.transform);
+    PromptManager promptManager = promptObject.GetComponent<PromptManager>();
+    promptManager.SetText(promptMessage);
+    promptManager.OnAccept = acceptHandler;
   }
 
   public void Initialize()

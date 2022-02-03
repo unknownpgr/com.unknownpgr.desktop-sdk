@@ -45,3 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainCanvas: {fileID: 5303069969393682242, guid: 8f1f351de38f646c089f9c5eb4ccd66e, type: 3}
   MessagePrefab: {fileID: 7460584920261826971, guid: 760241899ccf44a33ab446fd6e836a5e, type: 3}
+  PromptPrefab: {fileID: 3746649676250618232, guid: d04b54ac0efa840fd9cf4a534bd110c6, type: 3}

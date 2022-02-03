@@ -20,6 +20,7 @@ This project implements an Unity SDK that implements following requirements.
 
 - `public void Initialize()` : Initialize SDK. It will connect to server, currently, as an example, `checkip.amazonaws.com`, get `public` IP address of host machine.
 - `public void ShowMessage(string message)` : Disply simple message. (requirement 3)
+- `public void ShowPrompt(string message, bool onAccept(string userInput))` : Disply simple prompt. `onAccpet` callback is called when user clicked `Ok` button of prompt. If return of `onAccpet` is `true`, the prompt will be closed. Else, it will remain unchanged so that user can chage the input value.
 
 ## Considerations
 
@@ -37,7 +38,8 @@ Nevertheless, because
 - the functionality of SDK is simple
 - using other pattern would increase the complexity too much for the scale of the project
 - team members are not used to such patterns
-  I decided to use singleton pattern.
+
+I decided to use singleton pattern.
 
 ### References
 

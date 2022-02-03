@@ -12,7 +12,7 @@ public class MessageManager : MonoBehaviour
     Text.text = text;
   }
 
-  public void OnClick()
+  public void OnCloseClicked()
   {
     Destroy(this.gameObject);
   }

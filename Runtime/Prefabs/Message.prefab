@@ -201,8 +201,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5232288221010595458}
-        m_TargetAssemblyTypeName: MessageManager, Assembly-CSharp
-        m_MethodName: OnClick
+        m_TargetAssemblyTypeName: MessageManager, DesktopSDKAssembly
+        m_MethodName: OnCloseClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
