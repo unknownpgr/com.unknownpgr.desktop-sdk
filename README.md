@@ -16,6 +16,10 @@ This project implements an Unity SDK that implements following requirements.
 2. Add a pre-built prefab `/Runtime/DesktopSDK` to scene. The prefab is `DontDestroyOnLoad` object, so the object only needs to be added to the first scene. However, adding objects in multiple scenes will not cause problems.
 3. Then, in C# script, call `DesktopSDK.Instance.Initialize()` to initailize SDK. You can also directly call `Initialize()` method of `DesktopSDK` script attached to the prefab object. (requirement 1) Then a initialization message box will appear (requirement 2). After few seconds, it will retrive its host IP address from server and show it with a message box. (requirement 4)
 
+## Example
+
+You can find an use case example [here](https://bitbucket.org/unknownpgr/desktop-sdk-example/src/master/).
+
 ## APIs
 
 - `public void Initialize()` : Initialize SDK. It will connect to server, currently, as an example, `checkip.amazonaws.com`, get `public` IP address of host machine.
